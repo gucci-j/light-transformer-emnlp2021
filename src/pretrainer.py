@@ -94,43 +94,28 @@ class AdditionalArguments:
 
     shuffle_prob: Optional[float] = field(
         default=0.15,
-        metadata={"help": "The ratio of shuffled words."}
+        metadata={"help": "[Shuffle] The ratio of shuffled words."}
     )
 
     mlm_prob: Optional[float] = field(
         default=0.15,
-        metadata={"help": "The ratio of masked tokens for MaskedLM."}
-    )
-
-    use_input_dropout: Optional[bool] = field(
-        default=False,
-        metadata={"help": "Whether to apply input dropout? This is only applicable to shuffled token cls."}
-    )
-
-    input_drop_ratio: Optional[float] = field(
-        default=0.15,
-        metadata={"help": "The ratio of input dropout."}
-    )
-
-    random_prob: Optional[float] = field(
-        default=0.10,
-        metadata={"help": "The ratio of random token replacement."}
+        metadata={"help": "[MLM] The ratio of masked tokens for MaskedLM."}
     )
 
     manipulate_prob: Optional[float] = field(
         default=0.10,
-        metadata={"help": "The ratio of shuffled / random tokens over all tokens. "
+        metadata={"help": "[Shuffle+Random] The ratio of shuffled / random tokens over all tokens. "
         + "The resulting manipulated ratio will be twice larger than `manipulate_prob`."}
     )
 
     mask_prob: Optional[float] = field(
         default=0.15,
-        metadata={"help": "The ratio of token masking."}
+        metadata={"help": "[First Char, Token Type] The ratio of token masking."}
     )
 
     random_prob: Optional[float] = field(
         default=0.15,
-        metadata={"help": "The ratio of random tokens."}
+        metadata={"help": "[Random] The ratio of random tokens."}
     )
 
     save_interval: Optional[float] = field(

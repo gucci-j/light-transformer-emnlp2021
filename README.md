@@ -62,8 +62,13 @@ python pretrainer.py \
 --mlm_prob=0.15 \
 --pretrain_model=RobertaForMaskedLM 
 ```
-* Available `pretrain_model` are: 
-
+* `pretrain_model` should be selected from:   
+    * `RobertaForMaskedLM` (MLM)  
+    * `RobertaForShuffledWordClassification` (Shuffle)  
+    * `RobertaForRandomWordClassification` (Random)  
+    * `RobertaForShuffleRandomThreeWayClassification` (Shuffle+Random)  
+    * `RobertaForFourWayTokenTypeClassification` (Token Type)  
+    * `RobertaForFirstCharPrediction` (First Char)
 
 #### Check the pre-training process  
 You can monitor the progress of pre-training via the Tensorboard. Simply run the following:  
