@@ -10,8 +10,6 @@ This is the official implementation for "Frustratingly Simple Pretraining Altern
 * scikit-learn
 * tensorflow
 * spacy
-* matplotlib
-* seaborn
 
 ## How to pre-train
 ### 1. Clone this repository
@@ -127,7 +125,7 @@ To use mixed precision during pre-training, just specify `--fp16` as an input ar
     ```
 
 2. **Create a json config file**  
-You need to create a `.json` file for configuration or use command line arguments. A sample `.json` file is available in `./params/finetune/glue/`.  
+You need to create a `.json` file for configuration or use command line arguments.
 
     ```json
     {
